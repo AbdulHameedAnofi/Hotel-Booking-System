@@ -1,4 +1,4 @@
-# Clear DYE Laravel App
+# Clear DRY Laravel App
 
 
 ---
