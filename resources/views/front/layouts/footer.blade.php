@@ -1,5 +1,5 @@
 <div class="copy">
-    <p>© 2017 Resort Inn</a> </p>
+    <p>© 2023 Resort Inn</a> </p>
   </div>
 
 <script type="text/javascript" src="{{ asset('front/templates/js/jquery-2.1.4.min.js') }}"></script>
