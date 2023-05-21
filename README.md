@@ -3,9 +3,6 @@
 
 ---
 
-## Site Screen Shot
-
-![This is a alt text.](/public/screen_short/screenShort.jpg)
 
 ---
 
