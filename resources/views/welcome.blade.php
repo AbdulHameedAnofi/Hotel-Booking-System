@@ -80,7 +80,7 @@
               @if(isset($booked_rooms[$key]) && $booked_rooms[$key] == $room->id)
               <span style="color: red">Booked</span>
               @else 
-              <a href="{{'/complete/payment?room_type_id='.$request->room_type_id.'&check_in='.$request->check_in.'&check_out='.$request->check_out.'&price='.$room->price.'&capacity='.$room->capacity.'&room_id='.$room->id }}">
+              <a href="{{'/complete/payment?room_type_id='.$request->room_type_id.'&check_in='.$request->check_in.'&check_out='.$request->check_out.'&price='.$room->price.'&capacity='.$room->capacity.'&room_id='.$request->room_id=$room->id }}">
                 {{ isset($booked_rooms[$key]) ? $booked_rooms[$key] == $room->id ? 'Booked' : 'Booking Now' : 'Booking Now' }}
               </a>
               @endif

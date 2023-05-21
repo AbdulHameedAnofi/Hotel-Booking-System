@@ -27,9 +27,9 @@ class LoginController extends Controller
     {   
         $user = $user->storeUser($request);
         
-        Mail::to($user->email)->send(new VerifyEmail($user));
+        // Mail::to($user->email)->send(new VerifyEmail($user));
 
-        return redirect()->back()->with('message','Registration completed & please check your email to activate your account!');
+        return redirect()->route('front.login')->with('message','Your account is activated & now you can log in!');
     }
 
     public function veriyEmail($token)
@@ -60,14 +60,14 @@ class LoginController extends Controller
 
         $status = User::where('email',$request->email)->first()['status'];
         
-        if(1 == $status){
+        // if(1 == $status){
             if (auth()->attempt($request->validated())) {
                 return $this->success('welcome', 'You are logged in!');
             }
             return $this->error('front.login', 'You credentials is not matched!');
-        }
+        // }
 
-        return $this->error('front.login', 'You are not an active user!!');
+        // return $this->error('front.login', 'You are not an active user!!');
     }
 
     public function userExists($email) : bool

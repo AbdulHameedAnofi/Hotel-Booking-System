@@ -21,7 +21,7 @@ Route::middleware(['auth'])->group(function () {
   Route::get('logout', [LoginController::class,'logout'])->name('logout');
 });
 
-Route::middleware(['auth','authorized','can.install'])->group(function () {
+Route::middleware(['auth','can.install'])->group(function () {
 
   Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard');
 

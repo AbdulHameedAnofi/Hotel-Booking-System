@@ -18,6 +18,5 @@ Route::get('search/room', [BookingController::class,'checkRoomStatus'])
 
 Route::get('complete/payment', [BookingController::class,'payment'])
 ->name('payment')->middleware('auth');
-Route::post('complete/payment', [BookingController::class,'completeBooking'])->name('payment.complete')->middleware('auth');
 Route::get('my/booking', [BookingController::class,'myBooking'])->name('myBooking')->middleware('auth');
 Route::get('invoice/{booking}', [InvoiceController::class,'invoice'])->name('invoice')->middleware('auth');

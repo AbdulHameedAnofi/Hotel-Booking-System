@@ -21,7 +21,7 @@
            </div>
            <div class="price-selet">	
              <h3><span>Per Night: $</span>{{ $room->price }}</h3>						
-             <a href="#availability-agileits" class="scroll" >Book Now</a>
+             <a href="{{$room}}" class="scroll" >Book Now</a>
            </div>
            <h4>{{ $room->type->name ?? 'Default Room' }}</h4>
          </div>
